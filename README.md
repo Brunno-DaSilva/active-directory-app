@@ -1,6 +1,10 @@
 # Active Directory App
 
-### Creating an ADA CRUD App step-by-step using MongoDB, Express, React Views, and Node. The intension of this guide is not to give you all the answers but to provide a workflow and structure when building a CRUD app.
+### Overview:
+
+Creating an ADA CRUD App step-by-step using MongoDB, Express, React Views, and Node.
+
+`The intension of this guide is to provide a workflow and structure when building a CRUD app.`
 
 ### Creating a CRUD APP
 
