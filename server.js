@@ -6,12 +6,13 @@ const app = express();
 const mongoose = require("mongoose");
 const User = require("./models/users.js");
 const port = process.env.PORT || 3000;
-// const methodOverride = require("method-override");
 
 //=============================
 //          Data
 //=============================
-// const Budget = require("./models/budget");
+
+const MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/activeDirectoryApp";
 
 //=============================
 // Required Middleware Engine
@@ -31,14 +32,23 @@ app.use(express.static("public"));
 // =============================
 //      Mongoose Connection
 // =============================
-mongoose.connect("mongodb://localhost:27017/activeDirectoryApp", {
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 
-mongoose.connection.once("open", () => {
-  console.log("Collegata a mongo");
-});
+// Error / success
+mongoose.connection.on("error", (err) =>
+  console.log(err.message + " is Mongod not running?")
+);
+
+mongoose.connection.on("connected", () =>
+  console.log("mongo connected: ", MONGODB_URI)
+);
+
+mongoose.connection.on("disconnected", () => console.log("mongo disconnected"));
+// open the connection to mongo
+mongoose.connection.on("open", () => {});
 
 // =============================
 //          Routers

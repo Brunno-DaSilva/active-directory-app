@@ -136,15 +136,26 @@ Creating an ADA CRUD App step-by-step using MongoDB, Express, React Views, and N
     a. mkdir models touch `modelsname.js`
 
 11. Create schema and models in the `modelsname.js` file
+
     a. Add the dependencies and Require mongoose
+
+    ```
+    //=============================
+    // Dependencies
+    //=============================
+    const mongoose = require("mongoose");
+
+    ```
+
     b. Add the User schema
 
     ```
+
         //=============================
         //      Users Schema
         //=============================
 
-            const userSchema = new userSchema( {
+            const userSchema = new mongoose.Schema( {
                 firstName: { type: String, required: true },
                 lastName: { type: String, required: true },
                 email: { type: String, required: true },
@@ -161,23 +172,24 @@ Creating an ADA CRUD App step-by-step using MongoDB, Express, React Views, and N
     c. Create a Models from the schema
 
     ```
+
     //=============================
-    //         User Models
+    // User Models
     //=============================
 
         const User = mongoose.model("User", userSchema);
 
     ```
 
-
     d. Export the created Models
-        ```
-        //=============================
-        //      Export User Models
-        //=============================
-            module.exports = User;
 
-        ```
+    ```
+    //=============================
+    //      Export User Models
+    //=============================
+        module.exports = User;
+
+    ```
 
 12. Require Your created Model
     a. Go to Server.js
