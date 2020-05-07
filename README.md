@@ -229,7 +229,7 @@ Creating an ADA CRUD App step-by-step using MongoDB, Express, React Views, and N
     })}
     ```
 
-    16. Blaaaa
-    17. Blaasasasa
-    18. blahsjdjdjsds
+    16. Delete
+    17. Edit
+    18. Update
     19.
