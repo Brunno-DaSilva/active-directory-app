@@ -4,8 +4,8 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const User = require("./models/users.js");
-const port = process.env.PORT || 3000;
+const User = require("./models/users");
+const PORT = process.env.PORT || 3001;
 
 //=============================
 //          Data
@@ -105,10 +105,8 @@ app.post("/users/", (req, res) => {
 
   //Use Model to crate User document
   User.create(req.body, (error, createdUser) => {
-    // once created - respond to client
     res.redirect("/users");
   });
-  //   res.redirect("/users");
 });
 
 // //====================
@@ -135,9 +133,9 @@ app.post("/users/", (req, res) => {
 //   res.redirect("/budgets"); //redirect to the index page
 // });
 
-// //=============================
-// // Listening on Port 3000
-// //=============================
-app.listen(port, () => {
-  console.log(`Ascoltando al porto... ${port}`);
+//=============================
+// Listening on Port 3000
+//=============================
+app.listen(PORT, () => {
+  console.log(`Ascoltando al porto... ${PORT}`);
 });

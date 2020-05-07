@@ -5,16 +5,19 @@ class New extends React.Component {
     return (
       <div>
         <h1>New page</h1>
-        <form action="/user" method="POST">
-          firstName: <input type="text" name="firstName" />
+
+        <form action="/users" method="POST">
+          First Name: <input type="text" name="firstName" />
           <br />
-          lastName: <input type="text" name="lastName" />
+          LastName: <input type="text" name="lastName" />
           <br />
-          Email: <input type="checkbox" name="email" />
+          Email: <input type="email" name="email" />
           <br />
-          Phone: <input type="checkbox" name="phone" />
+          Phone: <input type="text" name="phone" />
           <br />
           Department: <input type="text" name="department" />
+          <br />
+          Job Title: <input type="text" name="jobTitle" />
           <br />
           Job Description: <input type="text" name="jobDescription" />
           <br />

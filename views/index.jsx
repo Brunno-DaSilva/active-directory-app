@@ -3,15 +3,18 @@ const React = require("react");
 class Index extends React.Component {
   render() {
     const { users } = this.props;
+    console.log(this.props);
+    console.log("somethings");
+
     return (
       <html lang="en">
         <head>
-          <meta charset="UTF-8" />
+          <meta charSet="UTF-8" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 
           {/* Main StyleSheet */}
           <link rel="stylesheet" href="/css/style.css" />
@@ -22,21 +25,22 @@ class Index extends React.Component {
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-            crossorigin="anonymous"
+            crossOrigin="anonymous"
           />
-          <title>Budget-Index Page</title>
+          <title>Index Page</title>
         </head>
         <body>
+          <h1>Index Page</h1>
           <div className="container">
-            {users.map((userData, i) => {
+            {users.map((user, index) => {
               return (
                 <div>
-                  <h3>{userData.firstName}</h3>
-                  <h3>{userData.lastName}</h3>
-                  {userData.isActive ? <h4>Active</h4> : <h4>Not active</h4>}
+                  <h2>{user.firstName}</h2>
                 </div>
               );
             })}
+
+            <div></div>
           </div>
 
           <svg viewBox="0 0 100 25">
