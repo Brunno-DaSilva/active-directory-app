@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   email: { type: String, required: true },
-  phone: String,
+  phone: { type: String, required: true },
   department: { type: String, required: true },
   jobTitle: { type: String, required: true },
   jobDescription: { type: String, required: true },
