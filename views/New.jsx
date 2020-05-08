@@ -60,7 +60,7 @@ class New extends React.Component {
             <div class="main_content">
               <div class="header">
                 <div className="title">
-                  <h1>Active Directory App</h1>
+                  <h1>New page</h1>
                 </div>
                 <div className="social-icons">
                   <div className="logo">
@@ -91,36 +91,39 @@ class New extends React.Component {
                 </div>
               </div>
               <div class="info">
-                <div>
-                  <h1>New page</h1>
-                  <div className="container">
-                    <form action="/users" method="POST">
-                      First Name: <input type="text" name="firstName" />
-                      <br />
-                      LastName: <input type="text" name="lastName" />
-                      <br />
-                      Email: <input type="email" name="email" />
-                      <br />
-                      Phone: <input type="text" name="phone" />
-                      <br />
-                      Department: <input type="text" name="department" />
-                      <br />
-                      Job Title: <input type="text" name="jobTitle" />
-                      <br />
-                      Job Description:{" "}
-                      <input type="text" name="jobDescription" />
-                      <br />
-                      Created on: <input type="date" name="createdOn" />
-                      <br />
-                      Is active: <input type="checkbox" name="isActive" />
-                      <br />
-                      <input type="submit" name="" value="Create User" />
-                    </form>
-                    <div>
-                      <img src="" alt="Add User Form" />
-                    </div>
+                <div className="form-container">
+                  <form action="/users" method="POST">
+                    First Name: <input type="text" name="firstName" />
+                    <br />
+                    LastName: <input type="text" name="lastName" />
+                    <br />
+                    Email: <input type="email" name="email" />
+                    <br />
+                    Phone: <input type="text" name="phone" />
+                    <br />
+                    Department: <input type="text" name="department" />
+                    <br />
+                    Job Title: <input type="text" name="jobTitle" />
+                    <br />
+                    Job Description:
+                    <input type="text" name="jobDescription" />
+                    <br />
+                    Created on: <input type="date" name="createdOn" />
+                    <br />
+                    Is active: <input type="checkbox" name="isActive" />
+                    <br />
+                    <input type="submit" name="" value="Create User" />
+                  </form>
+
+                  <div className="form-img-holder">
+                    <img
+                      src="https://res.cloudinary.com/duprwuo4j/image/upload/v1588902667/imgs_starwars/EcommerceProject/add-user-form_yqkokh.png"
+                      alt="contact form"
+                    />
                   </div>
                 </div>
+
+                {/* end info container */}
               </div>
             </div>
           </div>
