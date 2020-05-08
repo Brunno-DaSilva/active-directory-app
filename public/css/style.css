@@ -29,11 +29,11 @@
 }
 
 /*==================================
-=            Main Style
+=            Main Style            =
 ===================================*/
 
 body {
-  width: 100%;
+  width: 100vw;
   min-height: 100%;
   margin: auto;
   font-family: "Open Sans Condensed", sans-serif;
@@ -45,10 +45,10 @@ body {
 }
 
 .nav-bar ul {
-  background-color: var(--nav-bg); /*080c1d*/
+  background-color: var(--nav-bg);
   position: fixed;
   width: 100vw;
-  height: 10vh;
+  height: 7vh;
   top: 0;
   left: 0;
   z-index: 900;
@@ -70,7 +70,7 @@ body {
   letter-spacing: 2px;
 }
 .nav-bar ul li a:hover {
-  color: #d6d6d6;
+  color: #bfe3ec;
 }
 .new-container {
   width: 100vw;
@@ -86,9 +86,10 @@ body {
 }
 .container {
   width: 90%;
-  min-height: 60vh;
+  min-height: 70vh;
+  padding: 3rem 0;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -106,10 +107,10 @@ body {
 /* ===== MAIN CODE ===== */
 .people {
   flex: 0 0 23%;
-  min-width: 350px;
-  height: 500px;
+  min-width: 28%;
+  height: 450px;
   margin: 25px 5px 0;
-  background-color: rgba(229, 229, 229, 1);
+  background-color: #ebfaff;
   position: relative;
   backface-visibility: hidden;
   overflow: hidden;
@@ -129,9 +130,9 @@ body {
 
 .people:hover .people__img {
   margin-top: 20px;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
+  height: 15%;
+  width: 60%;
+  border-radius: 5%;
 }
 
 .people:nth-of-type(1) .people__img {
@@ -140,7 +141,7 @@ body {
 }
 
 .people__div--name {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #ffffffcc;
   position: absolute;
   bottom: 5%;
   left: 0;
@@ -417,27 +418,6 @@ table tr:last-child td:last-child {
 //////////////////////////////////*/
 /*
 */
-
-li span,
-#bankAccount {
-  padding: 40px;
-  color: var(--main-light-color);
-  font-size: 1.3rem;
-}
-.lowBalance {
-  background-color: #f04a47;
-  color: var(--main-light-color);
-  padding: 1rem;
-  margin-left: 1rem;
-  border-radius: 50%;
-}
-.positiveBalance {
-  background-color: var(--main-btn-bg);
-  color: var(--main-light-color);
-  padding: 1rem;
-  margin-left: 1rem;
-  border-radius: 50%;
-}
 
 /*//////////////////////////////////
 //        Footer

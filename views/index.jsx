@@ -30,27 +30,31 @@ class Index extends React.Component {
           <title>Index Page</title>
         </head>
         <body>
-          <div className="nav-bar">
-            <ul>
-              <li>
-                <a href="http://localhost:3001/users">
-                  <i className="fas fa-home fa-2x"></i>
-                </a>
-              </li>
-              <li>
-                <a href="http://localhost:3001/users/new">
-                  <i className="fas fa-plus fa-2x"></i>
-                </a>
-              </li>
-              <li>
-                <a href="http://www.bruno-dasilva.com/">
-                  <i className="fas fa-cookie-bite fa-2x"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <div className="container">
+            <div className="nav-bar">
+              <ul>
+                <li>
+                  <a href="http://localhost:3001/users">
+                    <i className="fas fa-home"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://localhost:3001/users/new">
+                    <i className="fas fa-plus"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://localhost:3001/users">
+                    <i className="fas fa-users"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://www.bruno-dasilva.com/">
+                    <i className="fas fa-cookie-bite"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
             {users.map((user, index) => {
               return (
                 <div class="demo__div people">
@@ -80,6 +84,15 @@ class Index extends React.Component {
 
             <div></div>
           </div>
+          <svg viewBox="0 0 100 25">
+            <path fill="#1f2833" d="M0 30 V12 Q30 17 55 12 T100 11 V30z"></path>
+          </svg>
+
+          <footer>
+            <p>
+              2020 Bruno DaSilva <span> Budget App</span>
+            </p>
+          </footer>
         </body>
       </html>
     );
