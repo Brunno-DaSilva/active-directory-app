@@ -28,7 +28,7 @@ Creating an ADA CRUD App step-by-step using MongoDB, Express, React Views, and N
 
    ```
 
-4) Add Initial Middleware
+4) Add Middleware
 
    ```
    //=============================
@@ -228,8 +228,3 @@ Creating an ADA CRUD App step-by-step using MongoDB, Express, React Views, and N
             );
     })}
     ```
-
-    16. Delete
-    17. Edit
-    18. Update
-    19.
